@@ -1,23 +1,23 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ handleChangeSortBy, handleChangeFilter }) => {
   return (
     <div>
 
       <strong>Sort by:</strong>
       <label>
-        <input type="radio" value="Alphabetically" checked={null} onChange={null}/>
+        <input type="radio" value="Alphabetically" name='sortBy' onChange={handleChangeSortBy}/>
         Alphabetically
       </label>
       <label>
-        <input type="radio" value="Price" checked={null} onChange={null}/>
+        <input type="radio" value="Price" name='sortBy' onChange={handleChangeSortBy}/>
         Price
       </label>
       <br/>
 
       <label>
         <strong>Filter:</strong>
-        <select onChange={null}>
+        <select onChange={handleChangeFilter}>
           <option value="Tech">Tech</option>
           <option value="Sportswear">Sportswear</option>
           <option value="Finance">Finance</option>
